@@ -1,0 +1,16 @@
+# images/ml-base/requirements.txt
+# Versions figées (critère 2.8) : combinaison sur laquelle les 84 tests passent.
+# mlflow : MÊME version que le serveur (3.14.0, relevée via /version).
+# kfp est obligatoire : les composants sont déclarés avec install_kfp_package=False,
+# donc l'exécuteur KFP doit déjà être dans l'image. kfp-kubernetes n'y est PAS nécessaire
+# (il ne sert qu'à compiler le pipeline, sur le poste).
+kfp==2.18.0
+mlflow==3.14.0
+lightgbm==4.7.0
+imbalanced-learn==0.14.2
+scikit-learn==1.8.0
+pandas==2.3.3
+numpy==2.4.4
+pyarrow==24.0.0
+matplotlib==3.10.8
+joblib==1.5.3

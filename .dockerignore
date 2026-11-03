@@ -1,0 +1,20 @@
+# .dockerignore : le contexte de build part de la racine du dépôt
+.git
+.github
+.idea
+.venv
+.env
+mlops-env
+**/__pycache__
+**/*.pyc
+.pytest_cache
+mlruns
+mlflow.db
+*.db
+tests
+docs
+manifests
+# Jamais dans l'image : données et artefacts de compilation
+creditcard.csv
+*.csv
+pipeline.yaml
