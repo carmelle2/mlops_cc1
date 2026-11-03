@@ -186,5 +186,5 @@ def test_registry_components_refuse_to_run_without_tracking_uri(monkeypatch, nam
 def test_component_compiles_with_the_ml_base_image(tmp_path, name):
     out = tmp_path / f"{name}.yaml"
     compiler.Compiler().compile(getattr(C, name), str(out))
-    text = out.read_bytes().decode("utf-8", errors="replace"
+    text = out.read_bytes().decode("utf-8", errors="replace")
     assert f"comp-{name.replace('_', '-')}" in text and "ml-base:" in text
